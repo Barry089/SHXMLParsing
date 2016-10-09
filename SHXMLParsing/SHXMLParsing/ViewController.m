@@ -23,8 +23,7 @@
     _xmlUtil = [[XMLUtil alloc] init];
     _xmlUtil.delegate = self;
     
-    self.textView = nil;
-    
+    self.textView.text = @"";
     self.dataArray = [[NSMutableArray alloc] initWithCapacity:0];
 }
 
@@ -37,7 +36,8 @@
 #pragma mark - XMLUtilDelegate
 - (void)didParsedWithDataArray:(NSMutableArray *)array {
     self.dataArray = array;
-    NSLog(@"print student info: %@", self.dataArray);
+    //NSLog(@"print student info: %@", self.dataArray);
+    self.textView.text = [NSString stringWithFormat:@"%@", _dataArray];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
