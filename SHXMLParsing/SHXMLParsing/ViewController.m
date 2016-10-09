@@ -37,7 +37,16 @@
 - (void)didParsedWithDataArray:(NSMutableArray *)array {
     self.dataArray = array;
     //NSLog(@"print student info: %@", self.dataArray);
-    self.textView.text = [NSString stringWithFormat:@"%@", _dataArray];
+    //self.textView.text = [NSString stringWithFormat:@"%@", _dataArray];
+    NSMutableString *_mutableStr = [[NSMutableString alloc] initWithString:@""];
+    
+    for (Person *stud in _dataArray) {
+        
+        NSString *item = [NSString stringWithFormat:@"Id: %@, Name: %@, Gender:%@, Age:%@\n", stud.pid, stud.name, stud.gender, stud.age];
+        [_mutableStr appendString:item];
+    }
+    
+    self.textView.text = _mutableStr;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
