@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<person>
+    <student>
+        <pid>1001</pid>
+              <name>Tom Grant</name>
+            <gender>Male</gender>
+          <age>12</age>
+    </student>
+    
+    <student>
+        <pid>1002</pid>
+                <name>Lucy Bluyer</name>
+                <gender>Female</gender>
+                <age>18</age>
+    </student>
+    
+    <student>
+        <pid>1003</pid>
+                <name>Eric Gates</name>
+                <gender>Male</gender>
+                <age>15</age>
+    </student>
+</person>
