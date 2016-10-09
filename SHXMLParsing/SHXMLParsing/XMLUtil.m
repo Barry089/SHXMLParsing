@@ -65,10 +65,10 @@
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
+    
     NSLog(@" The parser has completed parsing and it was successful.");
     if ([self.delegate respondsToSelector:@selector(didParsedWithDataArray:)]) {
         [self.delegate didParsedWithDataArray:self.listArr];
-        NSLog(@"delegata");
     }
 }
 
